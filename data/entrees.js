@@ -30,3 +30,4 @@ const readEntrees = () => {
 }
 
 // Export CRUD functions
+module.exports = {readEntrees}
