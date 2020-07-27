@@ -15,6 +15,7 @@ const options = {
 const readEntrees = () => {
     const iou = new Promise((resolve, reject) => {
         MongoClient.connect(url, options, (err, client) => {
+            console.log(db_name, col_name, url)
             assert.equal(err, null);
 
             const db = client.db(db_name);

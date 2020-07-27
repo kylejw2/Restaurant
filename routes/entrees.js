@@ -1,10 +1,10 @@
-const {readEntrees} = require('../data/entrees');
+const {readEntrees} = require('../data/entrees.js');
 
 var express = require('express');
 var router = express.Router();
 
 // GET entrees
-router.get('/', (req, res, next) => {
+router.get('/', function(req, res, next) {
     readEntrees().then(data => {
         res.send(data);
     });
