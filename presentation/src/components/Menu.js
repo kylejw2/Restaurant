@@ -1,15 +1,12 @@
 import React from 'react';
 import '../App.css';
+import Entree from './Entree'
 
 function Menu() {
     return (
         <div>
             <h3>Menu</h3>
-            <ul>
-                <li>Entree</li>
-                <li>Entree</li>
-                <li>Entree</li>
-            </ul>
+            <Entree />
         </div>
         
     );
