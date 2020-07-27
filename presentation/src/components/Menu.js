@@ -1,18 +1,18 @@
 import React from 'react';
 import '../App.css';
 
-function Entree() {
+function Menu() {
     return (
         <div>
             <h3>Menu</h3>
             <ul>
-                <li>Hello world</li>
-                <li>Hello world</li>
-                <li>Hello world</li>
+                <li>Entree</li>
+                <li>Entree</li>
+                <li>Entree</li>
             </ul>
         </div>
         
     );
 }
 
-export default Entree;
+export default Menu;

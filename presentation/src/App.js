@@ -1,13 +1,21 @@
 import React from 'react';
 import './App.css';
-import Entree from './components/Entree';
+import Menu from './components/Menu';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Restaurant</h1>
-      <Entree />
-    </div>
+    <Router>
+      <div className="App">
+        <h1>Restaurant</h1>
+
+        <Switch>
+          <Route path="/menu">
+            <Menu />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
