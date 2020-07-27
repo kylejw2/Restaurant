@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Big Mac",
+        "calories": 550,
+        "price": 3.99
+    },
+    {
+        "name": "Double Quarter Pounder with Cheese",
+        "calories": 720,
+        "price": 4.79
+    },
+    {
+        "name": "Double Cheeseburger",
+        "calories": 440,
+        "price": 1.69
+    },
+    {
+        "name": "20 Pc. Chicken McNuggets",
+        "calories": 830,
+        "price": 500
+    },
+    {
+        "name": "McChicken",
+        "calories": 400,
+        "price": 1.29
+    },
+    {
+        "name": "Sausage, Egg & Cheese McGriddles",
+        "calories": 550,
+        "price": 3.29
+    },
+    {
+        "name": "Large French Fries",
+        "calories": 490,
+        "price": 1.89
+    }
+]
