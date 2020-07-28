@@ -14,7 +14,13 @@ export default class EntreeList extends React.Component{
     }
 
     render() {
-        const entrees = this.state.entrees.map(entree => <Entree key={entree._id} id={entree._id} name={entree.name} image={entree.image}/>);
+        const entrees = this.state.entrees.map(entree => <Entree 
+            key={entree._id} 
+            singleItem={false} 
+            id={entree._id} 
+            name={entree.name} 
+            image={entree.image}
+        />);
         return (
             <ul>
                 {entrees}

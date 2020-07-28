@@ -15,7 +15,7 @@ function App() {
             <Menu />
           </Route>
           <Route path="/menu/:id">
-            <Entree />
+            <Entree singleItem={true}/>
           </Route>
         </Switch>
       </div>
