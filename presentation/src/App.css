@@ -2,6 +2,13 @@
   text-align: center;
 }
 
+h3 {
+  width: 100px;
+  display: inline-block;
+  margin: auto;
+  text-align: center;
+}
+
 ul {
   list-style: none;
   padding: 0;
