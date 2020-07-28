@@ -12,11 +12,10 @@ export default class EntreeList extends React.Component{
         const response = await fetch(url);
         const data = await response.json();
         this.setState({entrees: data});
-        console.log(response, data, url);
     }
 
     render() {
-        const entrees = this.state.entrees.map(entree => <Entree name={entree.name} image={entree.image}/>);
+        const entrees = this.state.entrees.map(entree => <Entree key={entree._id} name={entree.name} image={entree.image}/>);
         return (
             <ul>
                 {entrees}
