@@ -3,6 +3,7 @@ import './App.css';
 import Menu from './components/Menu';
 import Entree from './components/Entree';
 import Nav from './components/Nav';
+import AddEntree from './components/AddEntree';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
           </Route>
           <Route path="/menu/:id">
             <Entree singleItem={true}/>
+          </Route>
+          <Route path="/add-entree">
+            <AddEntree />
           </Route>
         </Switch>
       </div>
