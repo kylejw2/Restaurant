@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 function Menu() {
     return (
         <div>
-            <Link to='/menu'><h3>Menu</h3></Link>
             <EntreeList />
         </div>
     );

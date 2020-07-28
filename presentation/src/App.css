@@ -34,3 +34,8 @@ a {
   text-decoration: none !important;
   border-bottom-style: none;
 }
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+}

@@ -5,15 +5,13 @@ export default class EntreeList extends React.Component{
     state = {
         name: '',
         image: '',
-        id: '' // is this a string?
+        id: '' // should this be a string?
     }
-
-    // Get the id and make a fetch request to retreive the data on a single entree from the database
-
 
     render() {
         if (this.props.singleItem) {
-    // Call the function here to execute the theory in line 11
+            // get the async function
+
         } else {
             return (
                 <li>
