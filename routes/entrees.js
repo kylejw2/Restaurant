@@ -21,10 +21,10 @@ router.get('/', function(req, res, next) {
 
 // CREATE entree
 router.post('/', function(req, res, next) {
-    const entree = req.body;
-    createEntree(entree).then(data => {
+    const body = req.body;
+    createEntree(body).then(data => {
         res.send(data);
     });
-});
+  });
 
 module.exports = router;

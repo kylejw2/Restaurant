@@ -41,9 +41,10 @@ const createEntree = (entree) => {
                 assert.equal(err, null);
                 resolve(result.ops);
                 client.close();
-            });
-        });
+            })
+        })
     });
+    return iou;
 }
 
 // Export CRUD functions
