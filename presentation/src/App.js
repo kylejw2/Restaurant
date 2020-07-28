@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Menu from './components/Menu';
+import Entree from './components/Entree';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -10,8 +11,11 @@ function App() {
         <h1>Restaurant</h1>
 
         <Switch>
-          <Route path="/menu">
+          <Route path="/menu" exact>
             <Menu />
+          </Route>
+          <Route path="/menu/:id">
+            <Entree />
           </Route>
         </Switch>
       </div>

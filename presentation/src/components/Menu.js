@@ -1,14 +1,13 @@
 import React from 'react';
-import '../App.css';
 import EntreeList from './EntreeList'
+import { Link } from 'react-router-dom';
 
 function Menu() {
     return (
         <div>
-            <h3>Menu</h3>
+            <Link to='/menu'><h3>Menu</h3></Link>
             <EntreeList />
         </div>
-        
     );
 }
 

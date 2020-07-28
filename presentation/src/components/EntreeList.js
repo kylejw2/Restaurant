@@ -1,5 +1,4 @@
 import React from 'react';
-import '../App.css';
 import Entree from './Entree';
 
 export default class EntreeList extends React.Component{
@@ -15,7 +14,7 @@ export default class EntreeList extends React.Component{
     }
 
     render() {
-        const entrees = this.state.entrees.map(entree => <Entree key={entree._id} name={entree.name} image={entree.image}/>);
+        const entrees = this.state.entrees.map(entree => <Entree key={entree._id} id={entree._id} name={entree.name} image={entree.image}/>);
         return (
             <ul>
                 {entrees}

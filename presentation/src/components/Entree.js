@@ -1,12 +1,15 @@
 import React from 'react';
-import '../App.css';
+import { Link } from 'react-router-dom';
 
 export default class EntreeList extends React.Component{
     render() {
         return (
-        <li>
-            <img src={this.props.image} alt='food' width='200px'/>
-            <h5>{this.props.name}</h5>
-        </li>);
+            <li>
+                <Link to={`/menu/${this.props.id}`}>
+                    <img src={this.props.image} alt='food' width='200px'/>
+                    <h5>{this.props.name}</h5>
+                </Link>
+            </li>
+        );
     }
 }
