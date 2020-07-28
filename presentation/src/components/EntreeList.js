@@ -15,7 +15,6 @@ export default class EntreeList extends React.Component{
         console.log(response, data, url);
     }
 
-
     render() {
         const entrees = this.state.entrees.map(entree => <Entree name={entree.name} image={entree.image}/>);
         return (
