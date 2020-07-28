@@ -18,6 +18,12 @@ router.get('/', function(req, res, next) {
         res.send(data);
     });
 });
+// GET one entree
+router.get('/:id', function(req, res, next) {
+    readEntrees(req.params.id).then(data => {
+        res.send(data);
+    });
+});
 
 // CREATE entree
 router.post('/', function(req, res, next) {

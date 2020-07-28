@@ -11,19 +11,27 @@ const options = {
     useUnifiedTopology: true
 };
 
-// Read all Entrees
-const readEntrees = () => {
+// Read all Entrees or just one
+const readEntrees = (id = '') => {
     const iou = new Promise((resolve, reject) => {
         MongoClient.connect(url, options, (err, client) => {
             assert.equal(err, null);
 
             const db = client.db(db_name);
             const collection = db.collection(col_name);
-            collection.find({}).toArray((err, docs) => {
-                assert.equal(err, null);
-                resolve(docs);
-                client.close();
-            })
+            if (id === '') {
+                collection.find({}).toArray((err, docs) => {
+                    assert.equal(err, null);
+                    resolve(docs);
+                    client.close();
+                })
+            } else {
+                collection.findOne({_id: new ObjectId(id)}, (err, doc) => {
+                    assert.equal(err, null);
+                    resolve(doc);
+                    client.close();
+                });
+            }
         })
     });
     return iou;
