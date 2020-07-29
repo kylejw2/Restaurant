@@ -1,6 +1,7 @@
 const {
     readEntrees,
-    createEntree
+    createEntree,
+    deleteEntree
 } = require('../data/entrees.js');
 
 var express = require('express');
@@ -31,6 +32,13 @@ router.post('/', function(req, res, next) {
     createEntree(body).then(data => {
         res.send(data);
     });
-  });
+});
+
+// DELETE entree
+router.delete('/:id', function(req, res, next) {
+    deleteEntree(req.params.id).then(data => {
+        res.send(data);
+    });
+});
 
 module.exports = router;

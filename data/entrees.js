@@ -55,8 +55,26 @@ const createEntree = (entree) => {
     return iou;
 }
 
+// Delete an Entree
+const deleteEntree = (id) => {
+    const iou = new Promise((resolve, reject) => {
+        MongoClient.connect(url, options, (err, client) => {
+            assert.equal(err, null);
+            const db = client.db(db_name);
+            const collection = db.collection(col_name);
+            collection.findOneAndDelete({_id: new ObjectId(id)}, (err, doc) => {
+                assert.equal(err, null);
+                resolve(doc.value);
+                client.close();
+            })
+        })
+    });
+    return iou;
+} 
+
 // Export CRUD functions
 module.exports = {
     readEntrees,
-    createEntree
+    createEntree,
+    deleteEntree
 }
