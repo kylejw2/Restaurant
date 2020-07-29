@@ -38,3 +38,8 @@ nav {
   display: flex;
   justify-content: space-evenly;
 }
+
+form {
+  padding: 50px;
+  
+}

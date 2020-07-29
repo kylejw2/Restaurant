@@ -27,7 +27,6 @@ export default class AddEntree extends React.Component {
             },
             body: JSON.stringify(data)
         }
-        console.log(options);
         await fetch(`${process.env.REACT_APP_API_URL}`, options);
     }
 
