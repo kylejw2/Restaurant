@@ -4,6 +4,7 @@ import Menu from './components/Menu';
 import Entree from './components/Entree';
 import Nav from './components/Nav';
 import AddEntree from './components/AddEntree';
+import DeleteEntree from './components/DeleteEntree';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route path="/add-entree">
             <AddEntree />
+          </Route>
+          <Route path="/delete-entree">
+            <DeleteEntree />
           </Route>
         </Switch>
       </div>
