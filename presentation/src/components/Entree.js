@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default class EntreeList extends React.Component{
     render() {
         if (this.props.singleItem) {
-            return "Please wait while I try to understand how to make a specific web page dedicated to your food choice. This may take a while.";
+            return "This functionality has not yet been implemented.";
         }
         return (
             <li>
