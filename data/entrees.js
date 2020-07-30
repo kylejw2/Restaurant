@@ -80,7 +80,7 @@ const updateEntree = (id, entree) => {
             assert.equal(err, null);
             const db = client.db(db_name);
             const collection = db.collection(col_name);
-            collection.findOneAndUpdate({_id: new ObjectId(id)}, {$set: {entree}}, (err, doc) => { // the second argument may need {}
+            collection.findOneAndUpdate({_id: new ObjectId(id)}, {$set: {entree}}, (err, doc) => {
                 assert.equal(err, null);
                 resolve(doc.value);
                 client.close();
