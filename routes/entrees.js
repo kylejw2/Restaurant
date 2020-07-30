@@ -1,7 +1,8 @@
 const {
     readEntrees,
     createEntree,
-    deleteEntree
+    deleteEntree,
+    updateEntree
 } = require('../data/entrees.js');
 
 var express = require('express');
@@ -37,6 +38,13 @@ router.post('/', function(req, res, next) {
 // DELETE entree
 router.delete('/:id', function(req, res, next) {
     deleteEntree(req.params.id).then(data => {
+        res.send(data);
+    });
+});
+
+// UPDATE entree
+router.patch('/:id', function(req, res, next) {
+    updateEntree(req.params.id, req.body).then(data => {
         res.send(data);
     });
 });
