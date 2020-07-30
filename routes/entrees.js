@@ -44,7 +44,13 @@ router.delete('/:id', function(req, res, next) {
 
 // UPDATE entree
 router.patch('/:id', function(req, res, next) {
-    updateEntree(req.params.id, req.body).then(data => {
+    const body = req.body;
+    // Filter the empty properties so they aren't sent
+    if (body.name === '') {delete body.name}
+    if (body.price === '') {delete body.price}
+    if (body.calories === '') {delete body.calories}
+    if (body.image === '') {delete body.image}
+    updateEntree(req.params.id, body).then(data => {
         res.send(data);
     });
 });

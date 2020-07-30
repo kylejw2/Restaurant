@@ -20,6 +20,8 @@ export default class EntreeList extends React.Component{
             id={entree._id} 
             name={entree.name} 
             image={entree.image}
+            price={entree.price}
+            calories={entree.calories}
         />);
         return (
             <ul>
