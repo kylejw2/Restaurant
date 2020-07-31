@@ -31,6 +31,13 @@ export default class UpdateEntree extends React.Component {
             body: JSON.stringify(data)
         }
         await fetch(url, options);
+        this.setState({
+            id: '',
+            name: '',
+            price: '',
+            calories: '',
+            image: ''
+        })
     }
 
     render() {

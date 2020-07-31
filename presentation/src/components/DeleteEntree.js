@@ -26,6 +26,7 @@ class DeleteEntree extends React.Component {
         } else {
             return null;
         }
+        this.setState({id: ''});
     }
 
     render() {
